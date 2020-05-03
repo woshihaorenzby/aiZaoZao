@@ -1,0 +1,32 @@
+.search{
+  width: 435rpx;
+  height: 70rpx;
+}
+image{
+  width: 52.5rpx;
+  height: 52.5rpx;
+  padding-top: 13.25rpx;
+  padding-left: 14.5rpx;
+  float: left;
+  margin-right: 21rpx;
+}
+.searchDiv{
+    width: 627rpx;
+    border-radius: 100rpx;
+    background: #c7c2c2;
+    height: 70rpx;
+    position: relative;
+    margin: auto;
+    margin-top: 30rpx;
+}
+.returns {
+  width: 72.5rpx;
+  height: 52.5rpx;
+  padding-top: 13.25rpx;
+  padding-left: 14.5rpx;
+  float: right;
+  margin-right: 20rpx;
+  margin-top: -70rpx;
+  border-left: 1px solid #e0e0e0;
+  right: 0.4rem;
+}

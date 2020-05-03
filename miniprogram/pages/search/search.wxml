@@ -1,0 +1,16 @@
+<view class="fixTop">
+    <view class="m_top m_nav" >
+        <a class="return" onclick="javascript:history.back(-1);"></a>
+    </view>
+    <view class="searchDiv">
+        <image src="/images/search.png" alt=""></image>
+        <input id="search" bindinput="doSearch" class="search" placeholder="{{placeholer}}"></input>
+        <text></text>
+        <view class="returns">
+            <a class="search_btn" onclick="javascript:history.back(-1);">取消</a>
+       </view>
+		</view>
+		<view>
+			<button bindtap="getAd" data-text="点我啊">点我啊</button>
+		</view>
+</view>

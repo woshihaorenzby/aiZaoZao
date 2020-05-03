@@ -54,6 +54,11 @@
       <text>云调用</text>
     </navigator>
   </view>
-
+<!-- 二手房搜索 -->
+  <view class="uploader">
+    <navigator url="../search/search" open-type="navigate" class="uploader-text">
+      <text>二手房搜索</text>
+    </navigator>
+  </view>
 
 </view>
