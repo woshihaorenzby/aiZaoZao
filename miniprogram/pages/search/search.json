@@ -1,10 +1,10 @@
 {
   "usingComponents": {},
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "white",
     "navigationBarTextStyle": "red",
     "navigationBarTitleText": "搜索",
-    "backgroundColor": "#ffffff",
+    "backgroundColor": "white",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
   }

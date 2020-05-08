@@ -1,16 +1,61 @@
 <view class="fixTop">
-    <view class="m_top m_nav" >
-        <a class="return" onclick="javascript:history.back(-1);"></a>
-    </view>
-    <view class="searchDiv">
-        <image src="/images/search.png" alt=""></image>
-        <input id="search" bindinput="doSearch" class="search" placeholder="{{placeholer}}"></input>
-        <text></text>
-        <view class="returns">
-            <a class="search_btn" onclick="javascript:history.back(-1);">取消</a>
-       </view>
+	<view class="m_top m_nav">
+		<a class="return" onclick="javascript:history.back(-1);"></a>
+	</view>
+	<view class="searchDiv">
+		<image src="/images/search.png" alt=""></image>
+		<input id="search" bindinput="doSearch" class="search" placeholder="{{placeholer}}" value="{{search}}"></input>
+		<text class="clear" wx:if="{{clearShow}}" bindtap="doClear"></text>
+		<text></text>
+		<view class="returns">
+			<text></text>
+			<a class="search_btn" onclick="javascript:history.back(-1);">取消</a>
 		</view>
-		<view>
-			<button bindtap="getAd" data-text="点我啊">点我啊</button>
+	</view>
+	<!--热搜-->
+	<view class="content">
+		<view class="switch">
+			<view class="com" wx:if="{{adList!==null && adList.length>0}}">
+				<view class="comHot">
+					<view class="hotDiv">
+						<h1>热门搜索</h1>
+						<view class="over overS">
+							<!-- th:onclick="'javascript:goUrl(1,\''+${one.subName}+'\',\'/fang2/search='+${one.subName} +'\')'" -->
+							<a wx:for="{{adList}}" wx:for-item="val" wx:key="index" wx:if="{{index<8}}">
+								<text>{{val.subName}}</text>
+							</a>
+						</view>
+					</view>
+					<view class="hisDiv">
+					</view>
+				</view>
+			</view>
 		</view>
+		<view class="com result" wx:if="{{searchList!=null&&searchList.length>0}}">
+				<view class="circle" wx:for="{{searchList}}" wx:key="index" >
+					<view class="title">
+						<view>
+						<text 
+						wx:for="{{item.title}}" 
+						wx:for-item="val" 
+						wx:key="index" 
+						class="{{val.highLight?'high':'nomarl'}}"
+						>{{val.value}}</text>
+						<text class="labelType">{{item.type!=null&&item.type!=''?item.type:item.category}}</text>
+						</view>
+								
+					</view>
+					<view class="cirAdr" wx:if="{{item.address!=null&&item.address.length>0}}">
+						<view >
+						<text 
+						wx:for="{{item.address}}" 
+						wx:for-item="val" 
+						wx:key="index" 
+						class="{{val.highLight?'high':''}}"
+						>{{val.value}}</text>
+						</view>
+					</view>
+				</view>
+		</view>
+	</view>
 </view>

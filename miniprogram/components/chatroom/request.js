@@ -1,7 +1,7 @@
 // 生产环境
-// const apiHttp = "https://*****.com";
+const apiHttp = "https://ltapi.fangxiaoer.com";
 // 本地测试
-const apiHttp = "http://192.168.6.100:8083";
+// const apiHttp = "http://192.168.6.100:8083";
 // const socketHttp = "wss://*****.com/wss";
 function fun(url, method, data, header) {
   data = data || {};
@@ -42,7 +42,7 @@ function fun(url, method, data, header) {
             }
           }
         }
-        resolve(res);
+        resolve(res.data);
       },
       fail: reject,
       complete: function() {
